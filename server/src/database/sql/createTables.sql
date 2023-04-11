@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS todolist;
+
+CREATE TABLE todolist (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    deadline DATETIME,
+    createdAt DATETIME DEFAULT NOW(),
+    category VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    todoId INT NOT NULL,
+    message VARCHAR(255) NOT NULL,
+    createdAt DATETIME DEFAULT NOW(),
+    FOREIGN KEY (todoId) REFERENCES todolist(id) ON DELETE CASCADE
+);

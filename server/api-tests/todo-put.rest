@@ -1,0 +1,9 @@
+PUT http://localhost:8080/todolist/20
+Content-Type: application/json
+
+{
+    "title": "Um título atualizado não mais many",
+    "description": "Uma descrição atualizada não mais many",
+    "deadline": "2050-03-30 18:43:02",
+    "category": "nao mais many"
+}

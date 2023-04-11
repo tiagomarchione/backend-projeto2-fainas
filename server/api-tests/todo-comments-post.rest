@@ -1,0 +1,7 @@
+POST http://localhost:8080/todolist/comments
+Content-Type: application/json
+
+{
+    "todoId": 50,
+    "message": "Um comentário qualquer de teste"
+}

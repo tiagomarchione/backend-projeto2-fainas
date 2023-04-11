@@ -1,0 +1,35 @@
+POST http://localhost:8080/todolist/create-many
+Content-Type: application/json
+
+[
+    {
+        "title": "Um título qualquer many 6",
+        "description": "Uma descrição qualquer many 1",
+        "deadline": "2031-01-30 18:43:02",
+        "category": "Uma categoria qualquer de many 1"
+    },
+    {
+        "title": "Um título qualquer many 7",
+        "description": "Uma descrição qualquer many 2",
+        "deadline": "2032-02-28 18:43:02",
+        "category": "Uma categoria qualquer many 2"
+    },
+    {
+        "title": "Um título qualquer many 8",
+        "description": "Uma descrição qualquer many 3",
+        "deadline": "2033-03-30 18:43:02",
+        "category": "Uma categoria qualquer many 3"
+    },
+    {
+        "title": "Um título qualquer many 9",
+        "description": "Uma descrição qualquer many 4",
+        "deadline": "2034-04-30 18:43:02",
+        "category": "Uma categoria qualquer many 4"
+    },
+    {
+        "title": "Um título qualquer many 10",
+        "description": "Uma descrição qualquer many 5",
+        "deadline": "2035-05-30 18:43:02",
+        "category": "Uma categoria qualquer many 5"
+    }
+]
