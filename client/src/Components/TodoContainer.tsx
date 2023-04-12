@@ -97,9 +97,9 @@ export function TodoContainer() {
         <div className="flex">
             {TodoList && (
                 <div className="w-3/5 p-6">
-                    <div className="flex flex-row justify-end gap-4 w-[95.83%] px-6">
-                        <label className="font-bold self-center" htmlFor="">{texts.orderByLabel}</label>
-                        <select name="" id="" className="self-center bg-slate-200 border-2 border-slate-400 rounded-md px-2 py-1" onChange={(event) => {
+                    <div className="flex flex-row justify-evenly gap-4 px-12">
+                        <label className="font-bold self-center min-w-[100px]" htmlFor="">{texts.orderByLabel}</label>
+                        <select name="" id="" className="self-center w-full bg-slate-200 border-2 border-slate-400 rounded-md px-2 py-1" onChange={(event) => {
                             const params = {
                                 ...todoParams,
                                 offset: 0,
@@ -119,9 +119,9 @@ export function TodoContainer() {
                             <option value="createdAtAsc">Criados mais antigos</option>
                         </select>
                     </div>
-                    <div>
-                        <label className="font-bold self-center" htmlFor="">{texts.searchLabel}</label>
-                        <input type="text" placeholder="Digite um texto para pesquisar" className="self-center bg-slate-200 border-2 border-slate-400 rounded-md px-2 py-1" value={todoParams.search} onChange={(event) => {
+                    <div className="flex py-6 px-12 gap-4">
+                        <label className="min-w-[100px] font-bold self-center" htmlFor="">{texts.searchLabel}</label>
+                        <input type="text" placeholder="Digite um texto para pesquisar" className="w-full self-center bg-slate-200 border-2 border-slate-400 rounded-md px-2 py-1" value={todoParams.search} onChange={(event) => {
                             const search = event.target.value;
                             const params = {
                                 ...todoParams,

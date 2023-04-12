@@ -14,7 +14,7 @@ const texts = {
     categoryLabel: "Categoria",
     deadlineLabel: "Prazo",
     submitButton: "Salvar edição",
-    submitSucess: "Sua Faina foi editada com sucesso!",
+    submitSuccess: "Sua Faina foi editada com sucesso!",
     submitFailure: "Não foi possível editar sua Faina devido a um erro",
 }
 
@@ -125,7 +125,7 @@ export function EditTodo() {
                         await EditTodo();
                         setDisabled(true);
                         setForm(initialEditTodoState);
-                        toast(texts.submitSucess);
+                        toast(texts.submitSuccess);
                         await delay(2);
                         navigate('/fainas');
                     }}
