@@ -14,9 +14,12 @@ export type TodoListProps = {
     loadPrevious?: boolean;
     onLoadNext?: () => Promise<void>;
     onLoadPrevious?: () => Promise<void>;
+    page?: number;
+    pageCount?: number;
+    count?: number;
 };
 
-export function TodoList({ todoList, getTodo, loadNext = false, loadPrevious = false, onLoadNext, onLoadPrevious }: TodoListProps) {
+export function TodoList({ todoList, getTodo, loadNext = false, loadPrevious = false, onLoadNext, onLoadPrevious, page, pageCount, count }: TodoListProps) {
     return (
         <section className='flex flex-row'>  
           <div className="p-6">
@@ -24,7 +27,7 @@ export function TodoList({ todoList, getTodo, loadNext = false, loadPrevious = f
               {todoList?.map(({ id, title, description, deadline, category }) => (
                 <li
                   key={id} 
-                  className="bg-slate-200 flex-wrap shadow-md rounded-xl p-3 w-[45%] cursor-pointer hover:bg-slate-300"
+                  className="bg-slate-200 flex-wrap shadow-md rounded-xl p-3 lg:w-[45%] w-11/12 cursor-pointer hover:bg-slate-300 md:max-w-screen-sm md:flex-col"
                   onClick={() => {
                     getTodo(id);
                   }}
@@ -41,8 +44,16 @@ export function TodoList({ todoList, getTodo, loadNext = false, loadPrevious = f
                   <p>{ description }</p>
                 </li>))} 
             </ul>
-            <div className="flex gap-10 justify-center p-4">
+            <div className="flex gap-4 justify-center p-4">
               <button disabled={!loadPrevious} onClick={onLoadPrevious} className="bg-blue-600 text-white text-md py-2 px-4 font-bold rounded-md w-1/4 hover:bg-blue-700 disabled:b-blue-300">{texts.loadPreviousButton}</button>
+              <div className="flex px-2">
+                {page !== undefined && pageCount !== undefined && page > 0 && pageCount > 0 && todoList?.length > 0 && (
+                  <div className="flex flex-col text-center">
+                    <span className="text-sm text-slate-600">Página {page} de {pageCount}</span>
+                    <span className="text-sm text-slate-600">{count && `(Total de ${count} Fainas)`}</span>
+                  </div>
+                )}
+              </div>
               <button disabled={!loadNext} onClick={onLoadNext} className="bg-blue-600 text-white text-md py-2 px-4 font-bold rounded-md w-1/4 hover:bg-blue-700 disabled:bg-blue-300">{texts.loadNextButton}</button>
             </div>
           </div>

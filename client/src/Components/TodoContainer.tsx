@@ -85,13 +85,13 @@ export function TodoContainer() {
         if (currentToDo.id !== currentToDoAxios.id) {
             setCurrentToDo(currentToDoAxios);
         }
-    }, [currentToDoAxios]);
+    }, [currentToDoAxios, currentToDo.id]);
 
     useEffect(() => {
         getTodoList({
             params: todoParams,
         });
-    }, []);
+    }, [getTodoList, todoParams]);
     
     return (
         <div className="flex">
@@ -133,6 +133,9 @@ export function TodoContainer() {
                         }}/>
                     </div>
                     <TodoList
+                        count={todoCount}
+                        page={(todoParams.offset + todoParams.limit)/todoParams.limit}
+                        pageCount={Math.ceil(todoCount/todoParams.limit)}
                         loadNext={todoParams.offset + todoParams.limit < todoCount}
                         loadPrevious={todoParams.offset > 0}
                         onLoadPrevious={async () => {
