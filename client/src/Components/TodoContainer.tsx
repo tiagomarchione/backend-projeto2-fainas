@@ -92,11 +92,12 @@ export function TodoContainer() {
             params: todoParams,
         });
     }, [getTodoList, todoParams]);
-    
+    // style={{ gridTemplateColumns: "3fr 2fr" }}
+
     return (
-        <div className="flex">
+        <div className="grid grid-cols-[3fr_2fr]">
             {TodoList && (
-                <div className="w-3/5 p-6">
+                <div className="p-6">
                     <div className="flex flex-row justify-evenly gap-4 px-12">
                         <label className="font-bold self-center min-w-[100px]" htmlFor="">{texts.orderByLabel}</label>
                         <select name="" id="" className="self-center w-full bg-slate-200 border-2 border-slate-400 rounded-md px-2 py-1" onChange={(event) => {
@@ -170,7 +171,7 @@ export function TodoContainer() {
                 </div>           
             )}
             
-            <div className="w-2/5">
+            <div>
                 <TodoView 
                     {...currentToDo}
                     onDelete={ async () => {

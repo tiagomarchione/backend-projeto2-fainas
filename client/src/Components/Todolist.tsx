@@ -21,7 +21,7 @@ export type TodoListProps = {
 
 export function TodoList({ todoList, getTodo, loadNext = false, loadPrevious = false, onLoadNext, onLoadPrevious, page, pageCount, count }: TodoListProps) {
     return (
-        <section className='flex flex-row'>  
+        <section>  
           <div className="p-6">
             <ul className="flex flex-wrap gap-6 justify-evenly">
               {todoList?.map(({ id, title, description, deadline, category }) => (

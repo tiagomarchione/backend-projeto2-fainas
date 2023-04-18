@@ -42,7 +42,7 @@ export function TodoView({
     }, [id]);
 
     return (
-        <section className="flex flex-row justify-center p-6 h-full max-h-[calc(100%-96px)]">
+        <section className="flex flex-row justify-center p-6 h-full max-h-[calc(100%-96px)] min-h-[80vh]">
             <div className="bg-slate-200 shadow-md rounded-xl p-3 w-11/12 justify-center">
                 <div className="flex flex-row justify-evenly w-full">
                     {id === undefined && (
