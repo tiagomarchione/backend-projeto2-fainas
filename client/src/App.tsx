@@ -1,8 +1,8 @@
-import { Navbar } from "./Components/Navbar";
+import { Navbar } from "./components/Navbar";
 import { Homepage } from "./routes/Homepage";
 import { Fainas } from "./routes/Fainas";
-import { Footer } from "./Components/Footer"
-import { Home } from "./Components/Home";
+import { Footer } from "./components/Footer"
+import { Home } from "./components/Home";
 import { CreateTodo } from "./routes/CreateTodo";
 import { EditTodo } from "./routes/EditTodo";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

@@ -1,5 +1,5 @@
 import type { ToDo } from "../types";
-import { getColorByValue } from "../Constants/categories";
+import { getColorByValue } from "../constants/categories";
 import toast from "react-simple-toasts";
 import { Link } from "./Link";
 import { useAxios, axios } from "../useAxios";

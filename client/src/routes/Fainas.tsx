@@ -1,4 +1,4 @@
-import { TodoContainer } from "../Components/TodoContainer";
+import { TodoContainer } from "../components/TodoContainer";
 
 export function Fainas() {
 

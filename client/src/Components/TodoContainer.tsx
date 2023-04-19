@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import { debounce } from "lodash";
 import toast from "react-simple-toasts";
-import { TodoList } from '../Components/Todolist';
-import { TodoView } from '../Components/Todoview';
+import { TodoList } from "./TodoList";
+import { TodoView } from "./TodoView";
 import type { ToDo } from '../types';
 import { useAxios } from '../useAxios';
 

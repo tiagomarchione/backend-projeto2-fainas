@@ -1,6 +1,6 @@
 import { type } from "os";
 import type { ToDo } from "../types";
-import { getColorByValue } from "../Constants/categories";
+import { getColorByValue } from "../constants/categories";
 
 const texts = {
   loadNextButton: "Próxima",

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useAxios } from "../useAxios";
 import toast from "react-simple-toasts";
 import { delay } from "../delay";
-import { categories } from "../Constants/categories";
+import { categories } from "../constants/categories";
 
 const texts = {
     title: "Editar Faina",

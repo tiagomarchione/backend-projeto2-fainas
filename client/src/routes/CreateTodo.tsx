@@ -4,8 +4,8 @@ import toast from "react-simple-toasts";
 import { useNavigate } from "react-router-dom";
 import { useZorm } from "react-zorm";
 import { delay } from "../delay";
-import { ErrorMessage } from "../Components/ErrorMessage";
-import { categories } from "../Constants/categories";
+import { ErrorMessage } from "../components/ErrorMessage";
+import { categories } from "../constants/categories";
 import { todoSchema } from "../todoSchema";
 
 const texts = {

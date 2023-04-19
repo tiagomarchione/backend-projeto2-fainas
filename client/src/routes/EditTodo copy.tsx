@@ -3,9 +3,9 @@ import { useParams, useNavigate, Form } from "react-router-dom";
 import { useAxios } from "../useAxios";
 import toast from "react-simple-toasts";
 import { useZorm } from "react-zorm";
-import { ErrorMessage } from "../Components/ErrorMessage";
+import { ErrorMessage } from "../components/ErrorMessage";
 import { delay } from "../delay";
-import { categories } from "../Constants/categories";
+import { categories } from "../constants/categories";
 import { todoSchema } from "../todoSchema";
 
 const texts = {
